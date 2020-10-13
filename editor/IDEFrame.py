@@ -621,8 +621,10 @@ class IDEFrame(wx.Frame):
 
         self.MainTabs["ProjectPanel"] = (self.ProjectPanel, _("Project"))
         self.LeftNoteBook.AddPage(*self.MainTabs["ProjectPanel"])
+        
+        self.ProjectPanel.SetMinimumPaneSize(10)
 
-        self.ProjectPanel.SplitHorizontally(self.ProjectTree, self.PouInstanceVariablesPanel, 300)
+        self.ProjectPanel.SplitHorizontally(self.ProjectTree, self.PouInstanceVariablesPanel, 500)
 
         # -----------------------------------------------------------------------
         #                            Creating Tool Bar
